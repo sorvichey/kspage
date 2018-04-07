@@ -10,7 +10,7 @@
     <meta name="keywords" content="ecommerce website templates, online store,">
     <title> kSpage </title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Style CSS -->
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
     <link href="{{asset('css/owl.carousel.css')}}" rel="stylesheet">
@@ -149,6 +149,7 @@
                     <div class="footer-widget">
                         <h3 class="footer-title">Policy Info</h3>
                         <ul class="arrow">
+                            <li><a href="{{url('shop-owner/login')}}">Shop Owner Login</a></li>
                             <li><a href="#">Payments</a></li>
                             <li><a href="#">Cancellation &amp; Returns</a></li>
                             <li><a href="#">Shipping and Delivery</a></li>

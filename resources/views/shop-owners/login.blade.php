@@ -8,7 +8,7 @@
                         <div class="box-body">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb20">
-                                    <h3 class="mb10">Login</h3>
+                                    <h3 class="mb10">Shop Owner Login</h3>
                                 </div>
                                 <!-- form -->
                                 <form>
@@ -16,7 +16,7 @@
                                         <div class="form-group">
                                             <label class="control-label sr-only" for="email"></label>
                                             <div class="login-input">
-                                                <input id="email" name="emaol" type="text" class="form-control" placeholder="Enter your email id"  required>
+                                                <input id="username" name="username" type="text" class="form-control" placeholder="Enter your username"  required>
                                                 <div class="login-icon"><i class="fa fa-user"></i></div>
                                             </div>
                                         </div>
@@ -25,16 +25,15 @@
                                         <div class="form-group">
                                             <label class="control-label sr-only"></label>
                                             <div class="login-input">
-                                                <input name="password" type="password" class="form-control" placeholder="******"  required>
+                                                <input name="password" type="password" class="form-control" placeholder="Password"  required>
                                                 <div class="login-icon"><i class="fa fa-lock"></i></div>
-                                                <div class="eye-icon"><i class="fa fa-eye"></i></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb20 ">
-                                        <button class="btn btn-info btn-block mb10">Sign In</button>
+                                        <button class="btn btn-warning btn-block mb10">Sign In</button>
                                         <div>
-                                            <p>Have an Acount? <a href="#">Login</a></p>
+                                            <p>Have an Acount? <a href="{{url('shop-owner/register')}}">Register Account</a></p>
                                         </div>
                                     </div>
                                 </form>
@@ -78,5 +77,5 @@
             </div>
         </div>
     </div>
-       <!-- /.login-form -->
-       @endsection
+<!-- /.login-form -->
+@endsection
