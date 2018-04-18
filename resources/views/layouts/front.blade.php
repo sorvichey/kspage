@@ -10,7 +10,7 @@
     <meta name="keywords" content="ecommerce website templates, online store,">
     <title> kSpage </title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Style CSS -->
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
     <link href="{{asset('css/owl.carousel.css')}}" rel="stylesheet">
@@ -45,7 +45,7 @@
                 <!-- logo -->
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-8">
                     <!-- <div class="logo"> -->
-                        <a href="{{url('/')}}"><img src="./images/ks_logo_footer.png" alt="logo" width="250"> </a>
+                        <a href="{{url('/')}}"><img src="{{asset('images/ks_logo_footer.png')}}" alt="logo" width="250"> </a>
                     <!-- </div> -->
                 </div>
                 <!-- /.logo -->
@@ -127,7 +127,7 @@
                 <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">
                     <div class="footer-widget">
                         <h3 class="footer-title">Download Mobile App</h3>
-                        <img src="./images/app.jpg" width="170">
+                        <img src="{{asset('images/app.jpg')}}" width="170">
                     </div>
                 </div>
                 <!-- /.footer-useful-links -->
@@ -149,6 +149,7 @@
                     <div class="footer-widget">
                         <h3 class="footer-title">Policy Info</h3>
                         <ul class="arrow">
+                            <li><a href="{{url('shop-owner/login')}}">Shop Owner Login</a></li>
                             <li><a href="#">Payments</a></li>
                             <li><a href="#">Cancellation &amp; Returns</a></li>
                             <li><a href="#">Shipping and Delivery</a></li>
