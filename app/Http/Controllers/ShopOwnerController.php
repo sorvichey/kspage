@@ -9,7 +9,7 @@ class ShopOwnerController extends Controller
 
     public function index()
     {
-        return view('index');
+        return view('shop-owners/index');
     }
 
     public function login(){

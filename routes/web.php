@@ -21,3 +21,4 @@ Route::get('/contact',"FrontController@contact");
 Route::get('/about',"FrontController@about");
 Route::get('/shop-owner/login',"ShopOwnerController@login");
 Route::get('/shop-owner/register',"ShopOwnerController@register");
+Route::get('/shop-owner/shop',"ShopOwnerController@index");
