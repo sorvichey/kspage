@@ -101,7 +101,12 @@
                                         <li><a href="styleguide.html">styleguide</a> </li>
                                     </ul> -->
                                 </li>
-                                <li><a href="contact-us.html">education</a>
+                                <li class="has-sub"><a href="#">education</a>
+                                    <ul>
+                                        <li><a href="{{url('school-list')}}">School Listing</a></li>
+                                        <li><a href="#">School Program</a></li>
+                                        <li><a href="#">Scholarship</a></li>
+                                    </ul>
                                 </li>
                                 <li><a href="template-feature.html">babyzone</a>
                                 </li>

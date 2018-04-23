@@ -129,6 +129,9 @@ textarea::-webkit-input-placeholder { color: #a6a7a8 !important; }
     background: #fff;
     padding: 10px;
 }
+.top-head {
+    margin-top: 10px;
+}
 .shop-name {
     position: absolute;
     bottom: 40px;

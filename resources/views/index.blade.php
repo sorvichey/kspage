@@ -251,7 +251,7 @@
                         <div class="item">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pd-0">
                                 <div class="product-block">
-                                    <div class="product-img"><a href="{{url('product-single')}}"><<img src="./images/product_img_5.png" alt=""></a></div>
+                                    <div class="product-img"><a href="{{url('product-single')}}"><img src="./images/product_img_5.png" alt=""></a></div>
                                     <div class="product-content">
                                         <h5><a href="#" class="product-title">Apple iPhone 6 <strong>(32 GB, Gold)</strong></a></h5>
                                         <div class="product-meta"><a href="#" class="product-price">$1700</a>
@@ -271,7 +271,7 @@
                         <div class="item">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pd-0">
                                 <div class="product-block">
-                                    <div class="product-img"><a href="{{url('product-single')}}"><<img src="./images/product_img_6.png" alt=""></a></div>
+                                    <div class="product-img"><a href="{{url('product-single')}}"><img src="./images/product_img_6.png" alt=""></a></div>
                                     <div class="product-content">
                                         <h5><a href="#" class="product-title">Apple iPhone 7 <strong>(256 GB, Black)</strong> </a></h5>
                                         <div class="product-meta"><a href="#" class="product-price">$1400</a>
@@ -291,7 +291,7 @@
                         <div class="item">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pd-0">
                                 <div class="product-block">
-                                    <div class="product-img"><a href="{{url('product-single')}}"><<img src="./images/product_img_7.png" alt=""></a></div>
+                                    <div class="product-img"><a href="{{url('product-single')}}"><img src="./images/product_img_7.png" alt=""></a></div>
                                     <div class="product-content">
                                         <h5><a href="#" class="product-title">Apple iPhone 6S <strong>(32GB, Gold)</strong> </a></h5>
                                         <div class="product-meta"><a href="#" class="product-price">$1300</a>
@@ -311,7 +311,7 @@
                         <div class="item">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pd-0">
                                 <div class="product-block">
-                                    <div class="product-img"><a href="{{url('product-single')}}"><<img src="./images/product_img_8.png" alt=""></a></div>
+                                    <div class="product-img"><a href="{{url('product-single')}}"><img src="./images/product_img_8.png" alt=""></a></div>
                                     <div class="product-content">
                                         <h5><a href="#" class="product-title">Apple iPhone X <strong>(64 GB, Grey)</strong></a></h5>
                                         <div class="product-meta"><a href="#" class="product-price">$1200</a>
