@@ -23,3 +23,4 @@ Route::get('/shop-owner/login',"ShopOwnerController@login");
 Route::get('/shop-owner/register',"ShopOwnerController@register");
 Route::get('/shop-owner/shop',"ShopOwnerController@index");
 Route::get('/school-list',"FrontController@school_list");
+Route::get('/scholarship',"FrontController@scholarship");

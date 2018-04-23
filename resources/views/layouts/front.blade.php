@@ -104,8 +104,8 @@
                                 <li class="has-sub"><a href="#">education</a>
                                     <ul>
                                         <li><a href="{{url('school-list')}}">School Listing</a></li>
-                                        <li><a href="#">School Program</a></li>
-                                        <li><a href="#">Scholarship</a></li>
+                                        <li><a href="{{url('scholarship')}}">School Program</a></li>
+                                        <li><a href="{{url('scholarship')}}">Scholarship</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="template-feature.html">babyzone</a>

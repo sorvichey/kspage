@@ -44,4 +44,7 @@ class FrontController extends Controller
     public function school_list(){
         return view('school-lists');
     }
+    public function scholarship(){
+        return view('scholarships');
+    }
 }
