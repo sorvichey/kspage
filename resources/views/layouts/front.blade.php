@@ -88,9 +88,8 @@
                                         <li><a href="product-single.html">Mobile Single </a></li>
                                     </ul>
                                 </li>
-                                <li class="has-sub"><a href="about.html">shopping</a>
-
-                                </li>
+                                <li class="has-sub"><a href="about.html">shopping</a></li>
+                                <li><a href="{{url('company-category')}}">company</a></li>
                                 <li><a href="#">corpdiscount</a>
                                  <!--    <ul>
                                         <li><a href="checkout.html">Checkout Form</a></li>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class FrontController extends Controller
 {
@@ -46,5 +47,37 @@ class FrontController extends Controller
     }
     public function scholarship(){
         return view('scholarships');
+    }
+    public function company_category(){
+        $data['company_categories'] = DB::table('company_categories')
+            ->where('active',1)
+            ->orderBy('name', 'asc')
+            ->paginate(50);
+        return view('company-categories', $data);
+    }
+    public function company_list($id){
+        $data['companies'] = DB::table('companies')
+            ->where('active',1)
+            ->where('category_id', $id)
+            ->orderBy('name', 'asc')
+            ->paginate(50);
+        return view('company-list', $data);
+    }
+    public function company_detail($id){
+        $data['company'] = DB::table('companies')
+            ->where('active',1)
+            ->where('id', $id)
+            ->first();
+        $business_id = $data['company']->business_type;
+        $category_id = $data['company']->category_id;
+        $data['business_type'] = DB::table('business_types')
+            ->where('id', $business_id)
+            ->where('active',1)
+            ->first();
+        $data['company_category'] = DB::table('company_categories')
+            ->where('id', $category_id)
+            ->where('active',1)
+            ->first();
+        return view('company-detail', $data);
     }
 }
