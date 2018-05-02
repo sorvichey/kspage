@@ -107,6 +107,7 @@
                                         <li><a href="{{url('scholarship')}}">Scholarship</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="template-feature.html">Event</a>
                                 <li><a href="template-feature.html">babyzone</a>
                                 </li>
                                                                  <li><a href="about.html">career</a>
