@@ -82,14 +82,14 @@
                         <div id="navigation">
                             <ul>
                                 <li class="active"><a href="{{url('/')}}">Home</a></li>
-                                <li class="has-sub"><a href="#">listing</a>
+                                <li class="has-sub"><a href="#">Listing</a>
                                     <ul>
                                         <li><a href="product-list.html">Mobile List</a></li>
                                         <li><a href="product-single.html">Mobile Single </a></li>
                                     </ul>
                                 </li>
-                                <li class="has-sub"><a href="about.html">shopping</a></li>
-                                <li><a href="{{url('company-category')}}">company</a></li>
+                                <li class="has-sub"><a href="about.html">Shopping</a></li>
+                                <li><a href="{{url('company-category')}}">Company</a></li>
                                 <li><a href="#">corpdiscount</a>
                                  <!--    <ul>
                                         <li><a href="checkout.html">Checkout Form</a></li>
@@ -100,7 +100,7 @@
                                         <li><a href="styleguide.html">styleguide</a> </li>
                                     </ul> -->
                                 </li>
-                                <li class="has-sub"><a href="#">education</a>
+                                <li class="has-sub"><a href="#">Education</a>
                                     <ul>
                                         <li><a href="{{url('school-list')}}">School Listing</a></li>
                                         <li><a href="{{url('scholarship')}}">School Program</a></li>
@@ -108,10 +108,10 @@
                                     </ul>
                                 </li>
                                 <li><a href="template-feature.html">Event</a>
-                                <li><a href="template-feature.html">babyzone</a>
+                                <li><a href="template-feature.html">Babyzone</a>
                                 </li>
-                                                                 <li><a href="about.html">career</a>
-                                  <li><a href="about.html">review</a>
+                                <li><a href="about.html">Career</a>
+                                <li><a href="about.html">Review</a>
                             </ul>
                         </div>
                     </div>
