@@ -56,29 +56,30 @@
                         <div class="box-body">
                             <div class="feature-left">
                                 <div class="feature-icon">
-                                    <img src="./images/feature_icon_1.png" alt="">
-                                </div>
-                                <div class="feature-content">
-                                    <h4>Loyalty Points</h4>
-                                    <p>Aenean lacinia dictum risvitae pulvinar disamer seronorem ipusm dolor sit manert.</p>
-                                </div>
-                            </div>
-                            <div class="feature-left">
-                                <div class="feature-icon">
                                     <img src="./images/feature_icon_2.png" alt="">
                                 </div>
                                 <div class="feature-content">
-                                    <h4>Instant Checkout</h4>
-                                    <p>Aenean lacinia dictum risvitae pulvinar disamer seronorem ipusm dolor sit manert.</p>
-                                </div>
-                            </div>
-                            <div class="feature-left">
-                                <div class="feature-icon">
-                                    <img src="./images/feature_icon_3.png" alt="">
-                                </div>
-                                <div class="feature-content">
-                                    <h4>Exculsive Offers</h4>
-                                    <p>Aenean lacinia dictum risvitae pulvinar disamer seronorem ipusm dolor sit manert.</p>
+                                    <h4>What you want to post?</h4>
+                                    <aside>
+                                        <input type="checkbox" id="subscribeNews" name="subscribe" value="Product">
+                                        <label>Product</label>
+                                    </aside>
+                                    <aside>
+                                        <input type="checkbox" id="education" name="education" value="Education">
+                                        <label>Education</label>
+                                    </aside>
+                                    <aside>
+                                        <input type="checkbox" id="event" name="event" value="Event">
+                                        <label>Event</label>
+                                    </aside>
+                                    <aside>
+                                        <input type="checkbox" id="company" name="company" value="Company">
+                                        <label>Company</label>
+                                    </aside>
+                                    <aside>
+                                        <input type="checkbox" id="review" name="review" value="Review">
+                                        <label>Review</label>
+                                    </aside>
                                 </div>
                             </div>
                         </div>
