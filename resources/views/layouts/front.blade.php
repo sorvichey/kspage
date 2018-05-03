@@ -17,6 +17,7 @@
     <link href="{{asset('css/owl.theme.default.css')}}" rel="stylesheet">
     <!-- FontAwesome CSS -->
     <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/custom.css')}}">
 </head>
 
 <body>
@@ -89,7 +90,7 @@
                                     </ul>
                                 </li>
                                 <li class="has-sub"><a href="about.html">shopping</a></li>
-                                <li><a href="{{url('company-category')}}">company</a></li>
+                                <li><a href="{{url('company-category?al=All')}}">Company Listing</a></li>
                                 <li><a href="#">corpdiscount</a>
                                  <!--    <ul>
                                         <li><a href="checkout.html">Checkout Form</a></li>
@@ -250,7 +251,7 @@
     });
     </script>
 
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         $(function () {
  
         $("#rateYo").rateYo({
@@ -259,29 +260,8 @@
         });
         
         });
-    </script>
-
-<script>
-    function initMap() {
-        var uluru = {
-            lat: 23.094197,
-            lng: 72.558148
-        };
-        var map = new google.maps.Map(document.getElementById('contact-map'), {
-            zoom: 14,
-            center: uluru,
-            scrollwheel: false
-        });
-        var marker = new google.maps.Marker({
-            position: uluru,
-            map: map,
-            icon: 'images/map_pin.png'
-
-        });
-    }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZib4Lvp0g1L8eskVBFJ0SEbnENB6cJ-g&callback=initMap">
-    </script>
+    </script> --}}
+    @yield('js')
 </body>
 
 </html>

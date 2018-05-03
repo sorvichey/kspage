@@ -49,10 +49,23 @@ class FrontController extends Controller
         return view('scholarships');
     }
     public function company_category(){
-        $data['company_categories'] = DB::table('company_categories')
-            ->where('active',1)
-            ->orderBy('name', 'asc')
-            ->paginate(50);
+        $al = $_GET['al'];
+        if($al=='All')
+        {
+            $data['company_categories'] = DB::table('company_categories')
+                ->where('active',1)
+                ->orderBy('name', 'asc')
+                ->paginate(50);
+        }
+        else{
+
+            $data['company_categories'] = DB::table('company_categories')
+                ->where('active',1)
+                ->where('name', 'like', "{$al}%")
+                ->orderBy('name', 'asc')
+                ->paginate(50);
+        }
+        $data['al'] = $al;
         return view('company-categories', $data);
     }
     public function company_list($id){
