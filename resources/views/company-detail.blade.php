@@ -1,36 +1,42 @@
 @extends('layouts.front')
 @section('content')
 <div class="box-head top-head">
-    <h3 class="head-title text-center"><img src="{{url('images/'.$company->logo)}}" alt="" width="50"> | {{$company->name}}</h3>
+    <h3 class="head-title text-center text-info"> {{$company_category->name}} | Company Detail</h3>
 </div>
 <p></p>
 <div class="container">
 <div class="company-cat">
     <div class="row" >
-            <div class="col-md-4">
-                    Company Name :&nbsp;&nbsp; {{$company->name}}
+            <div class="col-md-3">
+                <div align="center">
+                <img src="{{url('images/'.$company->logo)}}" alt="" width="150">
+                        <h3> {{$company->name}}</h3>
+                </div>
             </div>
-            <div class="col-md-4">
-                    Office Email :&nbsp;&nbsp; {{$company->office_email}}
+            <div class="col-md-9">
+                <div class="col-md-4">
+                      Company Name :&nbsp;&nbsp; <span class="text-info">{{$company->name}}</span>  
+                </div>
+                <div class="col-md-4">
+                        Office Email :&nbsp;&nbsp; <span class="text-info">{{$company->office_email}}</span>
+                </div>
+                <div class="col-md-4">
+                        Office Phone :&nbsp;&nbsp;<span class="text-info">{{$company->office_phone}}</span>
+                </div>
+                <div class="col-md-4">
+                        Business Type :&nbsp;&nbsp; <span class="text-info">{{$business_type->name}}</span>
+                </div>
+                <div class="col-md-8">
+                        Link to Profile :&nbsp;&nbsp; <a href="{{$company->website}}" target="_blank"><span class="text-info">{{$company->website}}</span></a>
+                </div>
+                <div class="col-md-12">
+                        Address :&nbsp;&nbsp; <span class="text-info">{{$company->address}}</span>
+                </div>
+                <div class="col-md-12">
+                        <b>Prifile:</b>  {!!$company->profile!!}</a>
+                </div>
             </div>
-            <div class="col-md-4">
-                    Office Phone :&nbsp;&nbsp; {{$company->office_phone}}
-            </div>
-            <div class="col-md-4">
-                    Business Type :&nbsp;&nbsp; {{$business_type->name}}
-            </div>
-            <div class="col-md-4">
-                    Category :&nbsp;&nbsp; {{$company_category->name}}
-            </div>
-            <div class="col-md-4">
-                Link to Profile :&nbsp;&nbsp; <a href="{{$company->website}}" target="_blank">{{$company->website}}</a>
-            </div>
-            <div class="col-md-12">
-                    Address :&nbsp;&nbsp; {{$company->address}}
-            </div>
-            <div class="col-md-12">
-                <b>prifile:</b>  {!!$company->profile!!}</a>
-            </div>
+            
         </div>
     </div>
 </div>

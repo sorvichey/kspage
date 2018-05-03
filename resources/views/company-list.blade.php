@@ -1,7 +1,7 @@
 @extends('layouts.front')
 @section('content')
 <div class="box-head top-head">
-    <h3 class="head-title text-center">Company List</h3>
+    <h3 class="head-title text-center text-info">{{$company_category->name}} | Company List</h3>
 </div>
 <p></p>
 <div class="container">

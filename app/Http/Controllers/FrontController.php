@@ -74,6 +74,10 @@ class FrontController extends Controller
             ->where('category_id', $id)
             ->orderBy('name', 'asc')
             ->paginate(50);
+        $data['company_category'] = DB::table('company_categories')
+            ->where('id', $id)
+            ->where('active',1)
+            ->first();
         return view('company-list', $data);
     }
     public function company_detail($id){
