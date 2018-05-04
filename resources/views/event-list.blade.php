@@ -13,9 +13,25 @@
     </style>
     <p></p>
     <div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            @foreach($event_categories as $cc)
+            <?php
+                $counter = DB::table('events')->where('active',1)->where('event_category', $cc->id)->count();
+            ?>
+                <div class="col-md-12 card card-c">
+                    <a href="{{url('event-list/'.$cc->id)}}">
+                        <div class="ec h-100">
+                    &nbsp;<img src="{{asset('images/'.$cc->icon)}}" alt="" width="25"> &nbsp;&nbsp;&nbsp;{{$cc->name}} (<span class="text-info">{{$counter}}</span>)
+                    </div>
+                    </a>
+                </div>
+            @endforeach
+        </div>
+        <div class="col-md-9">
         <div class="row">
             @foreach($events as $ev)
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 mb20">
+            <div class="col-lg-6 col-md-6 mb20">
                 <div class="product-block h-100">
                     <div class="product-img">
                         <aside class="price">
@@ -41,5 +57,7 @@
             {{$events->links()}}
             </div>
         </div>
+        </div>
     </div>
+    <p></p>
     @endsection

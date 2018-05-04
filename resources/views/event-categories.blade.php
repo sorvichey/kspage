@@ -1,78 +1,60 @@
 @extends('layouts.front')
 @section('content')
 <style>
-    .ac {
-        color: #fff;
-        background: #000!important;
-    }
-    ul.alpha li a:hover {
-        color: #fff;
-        background: #000;
-    }
+    .price {
+            padding: 0px 10px;
+            color: #fff;
+            background: #2196F3;
+            position: absolute;
+        }
 </style>
-<div class="box-head top-head">
-    <div class="container">
-        <ul class="alpha">
-            <li><a href="{{url('/event-category?al=All')}}">All</a></li>
-            <li><a href="{{url('/event-category?al=A')}}">A</a></li>
-            <li><a href="{{url('/event-category?al=B')}}">B</a></li>
-            <li><a href="{{url('/event-category?al=C')}}">C</a></li>
-            <li><a href="{{url('/event-category?al=D')}}">D</a></li>
-            <li><a href="{{url('/event-category?al=E')}}">E</a></li>
-            <li><a href="{{url('/event-category?al=F')}}">F</a></li>
-            <li><a href="{{url('/event-category?al=G')}}">G</a></li>
-            <li><a href="{{url('/event-category?al=H')}}">H</a></li>
-            <li><a href="{{url('/event-category?al=I')}}">I</a></li>
-            <li><a href="{{url('/event-category?al=J')}}">J</a></li>
-            <li><a href="{{url('/event-category?al=K')}}">K</a></li>
-            <li><a href="{{url('/event-category?al=L')}}">L</a></li>
-            <li><a href="{{url('/event-category?al=M')}}">M</a></li>
-            <li><a href="{{url('/event-category?al=N')}}">N</a></li>
-            <li><a href="{{url('/event-category?al=O')}}">O</a></li>
-            <li><a href="{{url('/event-category?al=P')}}">P</a></li>
-            <li><a href="{{url('/event-category?al=Q')}}">Q</a></li>
-            <li><a href="{{url('/event-category?al=R')}}">R</a></li>
-            <li><a href="{{url('/event-category?al=S')}}">S</a></li>
-            <li><a href="{{url('/event-category?al=T')}}">T</a></li>
-            <li><a href="{{url('/event-category?al=U')}}">U</a></li>
-            <li><a href="{{url('/event-category?al=V')}}">V</a></li>
-            <li><a href="{{url('/event-category?al=W')}}">W</a></li>
-            <li><a href="{{url('/event-category?al=X')}}">X</a></li>
-            <li><a href="{{url('/event-category?al=Y')}}">Y</a></li>
-            <li><a href="{{url('/event-category?al=Z')}}">Z</a></li>
-        </ul>
-    </div>
-</div>
 <p></p>
 <div class="container">
-
     <div class="row" >
-        @foreach($event_categories as $cc)
-        <?php
-            $counter = DB::table('events')->where('active',1)->where('event_category', $cc->id)->count();
-        ?>
-            <div class="col-md-4 card card-c">
-                <a href="{{url('event-list/'.$cc->id)}}">
-                    <div class="ec h-100">
-                   &nbsp;<img src="{{asset('images/'.$cc->icon)}}" alt="" width="30"> &nbsp;&nbsp;&nbsp;{{$cc->name}} (<span class="text-danger">{{$counter}}</span>)
-                   </div>
-                </a>
-            </div>
-        @endforeach
+        <div class="col-md-3">
+            @foreach($event_categories as $cc)
+            <?php
+                $counter = DB::table('events')->where('active',1)->where('event_category', $cc->id)->count();
+            ?>
+                <div class="col-md-12 card card-c">
+                    <a href="{{url('event-list/'.$cc->id)}}">
+                        <div class="ec h-100">
+                    &nbsp;<img src="{{asset('images/'.$cc->icon)}}" alt="" width="25"> &nbsp;&nbsp;&nbsp;{{$cc->name}} (<span class="text-info">{{$counter}}</span>)
+                    </div>
+                    </a>
+                </div>
+            @endforeach
         </div>
-        <br>
-    <div class="row">
-    {{$event_categories->appends(request()->input())->links()}}
+        <div class="col-md-9">
+            <div class="row">
+            @foreach($events as $ev)
+            <div class="col-lg-6 col-md-6 col-sm-6 mb20">
+                <div class="product-block h-100">
+                    <div class="product-img">
+                        <aside class="price">
+                            {{$ev->price}}
+                        </aside>
+                        <a href="{{url('/event/detail/'.$ev->id)}}"><img src="{{asset('./images/s2.jpeg')}}" width="100%" alt=""></a>
+                    </div>
+                    <div align="left" class="product-content">
+                        <h5  class="text-info">
+                            <i class="fa fa-calendar-check-o"></i> {{$ev->event_date}} <b>-</b> <i class="fa fa-clock-o" ></i> {{$ev->start_time }}
+                        </h5>
+                        <h4>{{$ev->title}}</h4>
+                        <h5  class="text-info">
+                            <i class="fa fa-map-marker"></i> {{$ev->location}}
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            @endforeach  
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                {{$events->links()}}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<p></p>
-@endsection
-@section('js')
-<script>
-    var al = "{{$al}}";
-    $(document).ready(function(){
-        $("ul.alpha li a").removeClass('ac');
-        $("ul.alpha li a:contains('"+al+"')").addClass('ac');
-    });
-</script>
 @endsection

@@ -599,7 +599,7 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 #cssmenu>ul>li.has-sub>a:after { content: '\f067'; position: absolute; top: 18px; right: 14px; font-family: 'FontAwesome'; font-size: 12px; color: #848687; }
 #cssmenu>ul>li.has-sub.active>a:after { content: '\f068'; position: absolute; right: 14px; top: 18px; font-family: 'FontAwesome'; color: #848687; font-size: 12px; }
 .ec {
-    padding: 5px;
+    padding: 1px;
 }
 .card-c {
     border-radius: 0;

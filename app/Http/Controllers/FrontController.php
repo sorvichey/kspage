@@ -98,31 +98,28 @@ class FrontController extends Controller
         return view('company-detail', $data);
     }
     public function event_category(){
-        $al = $_GET['al'];
-        if($al=='All')
-        {
-            $data['event_categories'] = DB::table('event_categories')
-                ->where('active',1)
-                ->orderBy('name', 'asc')
-                ->paginate(30);
-        }
-        else{
-
-            $data['event_categories'] = DB::table('event_categories')
-                ->where('active',1)
-                ->where('name', 'like', "{$al}%")
-                ->orderBy('name', 'asc')
-                ->paginate(30);
-        }
-        $data['al'] = $al;
+        $data['event_categories'] = DB::table('event_categories')
+            ->where('active',1)
+            ->orderBy('name', 'asc')
+            ->get();
+    
+        $data['events'] = DB::table('events')
+            ->where('active',1)
+            ->orderBy('id', 'desc')
+            ->paginate(16);
         return view('event-categories', $data);
     }
     public function event_list($id){
+        $data['event_categories'] = DB::table('event_categories')
+        ->where('active',1)
+        ->orderBy('name', 'asc')
+        ->get();
+
         $data['events'] = DB::table('events')
             ->where('active',1)
             ->where('event_category', $id)
             ->orderBy('id', 'desc')
-            ->paginate(30);
+            ->paginate(16);
         $data['event_category'] = DB::table('event_categories')
             ->where('id', $id)
             ->where('active',1)
