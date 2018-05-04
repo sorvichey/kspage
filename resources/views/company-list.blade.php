@@ -47,6 +47,4 @@
     {{$companies->links()}}
     </div>
 </div>
-   
-<p></p>
 @endsection
