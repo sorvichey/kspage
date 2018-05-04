@@ -33,7 +33,9 @@
             <aside>{!!$event->description!!}</aside>
             <hr>
             <div>
+                @if($event->map!==null)
                 <iframe src="{{$event->map}}" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                @endif
             </div>
         </div>
     </div>
