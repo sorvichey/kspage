@@ -110,7 +110,7 @@
                                         <li><a href="{{url('scholarship')}}">Scholarship</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="template-feature.html">Event</a>
+                                <li><a href="{{url('event-category?al=All')}}">Event</a>
                                 <li><a href="template-feature.html">Babyzone</a>
                                 </li>
                                 <li><a href="about.html">Career</a>

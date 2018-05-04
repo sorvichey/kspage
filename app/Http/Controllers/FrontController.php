@@ -73,7 +73,7 @@ class FrontController extends Controller
             ->where('active',1)
             ->where('category_id', $id)
             ->orderBy('name', 'asc')
-            ->paginate(50);
+            ->paginate(30);
         $data['company_category'] = DB::table('company_categories')
             ->where('id', $id)
             ->where('active',1)
@@ -96,5 +96,49 @@ class FrontController extends Controller
             ->where('active',1)
             ->first();
         return view('company-detail', $data);
+    }
+    public function event_category(){
+        $al = $_GET['al'];
+        if($al=='All')
+        {
+            $data['event_categories'] = DB::table('event_categories')
+                ->where('active',1)
+                ->orderBy('name', 'asc')
+                ->paginate(30);
+        }
+        else{
+
+            $data['event_categories'] = DB::table('event_categories')
+                ->where('active',1)
+                ->where('name', 'like', "{$al}%")
+                ->orderBy('name', 'asc')
+                ->paginate(30);
+        }
+        $data['al'] = $al;
+        return view('event-categories', $data);
+    }
+    public function event_list($id){
+        $data['events'] = DB::table('events')
+            ->where('active',1)
+            ->where('event_category', $id)
+            ->orderBy('id', 'desc')
+            ->paginate(30);
+        $data['event_category'] = DB::table('event_categories')
+            ->where('id', $id)
+            ->where('active',1)
+            ->first();
+        return view('event-list', $data);
+    }
+    public function event_detail($id){
+        $data['event'] = DB::table('events')
+            ->where('active',1)
+            ->where('id', $id)
+            ->first();
+        $category= $data['event']->event_category;
+        $data['event_category'] = DB::table('event_categories')
+            ->where('id', $category)
+            ->where('active',1)
+            ->first();
+        return view('event-detail', $data);
     }
 }

@@ -27,3 +27,6 @@ Route::get('/scholarship',"FrontController@scholarship");
 Route::get('/company-category',"FrontController@company_category");
 Route::get('/company-list/{id}',"FrontController@company_list");
 Route::get('/company-detail/{id}',"FrontController@company_detail");
+Route::get('/event-category',"FrontController@event_category");
+Route::get('/event-list/{id}',"FrontController@event_list");
+Route::get('/event/detail/{id}',"FrontController@event_detail");
